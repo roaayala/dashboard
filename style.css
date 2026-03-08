@@ -91,6 +91,7 @@ h6 {
 
 /* GRID CONTAINER */
 .container {
+	height: 100vh;
 	display: grid;
 	grid-template-columns: 1fr 4fr;
 }
