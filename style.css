@@ -105,6 +105,18 @@ h6 {
 	display: grid;
 	grid-template-columns: 3fr 1fr;
 	align-items: center;
+	gap: 1rem 0;
+}
+
+.search-bar,
+.account-brief {
+	display: flex;
+	gap: 0 1rem;
+	align-items: center;
+}
+
+.text h1 {
+	font-size: 1.5rem;
 }
 
 /* SIDEBAR */
