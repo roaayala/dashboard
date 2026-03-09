@@ -96,6 +96,7 @@ h6 {
 body {
 	font-family: 'Montserrat';
 	line-height: 1.5;
+	color: var(--color-dark);
 }
 
 button {
@@ -126,7 +127,7 @@ button {
 .header {
 	background-color: var(--color-light);
 	color: var(--color-dark);
-	padding: var(--spacing-8) var(--spacing-4);
+	padding: var(--spacing-8) var(--spacing-8);
 	grid-column: 2/3;
 	display: grid;
 	grid-template-columns: 2fr 1fr;
@@ -143,6 +144,11 @@ button {
 
 .text h1 {
 	font-size: 1.5rem;
+	line-height: 1;
+}
+
+.search-bar__icon {
+	font-size: 1.5rem;
 }
 
 .search-bar input {
@@ -157,7 +163,7 @@ button {
 
 .actions {
 	display: flex;
-	gap: var(--spacing-6);
+	gap: var(--spacing-4);
 }
 
 /* SIDEBAR */
