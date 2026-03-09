@@ -85,6 +85,12 @@ h6 {
 	--spacing-6: 1.5rem;
 	--spacing-7: 1.75rem;
 	--spacing-8: 2rem;
+
+	--color-dark: oklch(26.9% 0 0);
+	--color-gray: oklch(92.2% 0 0);
+	--color-light: white;
+	--color-blue: oklch(54.6% 0.245 262.881);
+	--color-orange: oklch(70.5% 0.213 47.604);
 }
 
 body {
@@ -96,12 +102,15 @@ button {
 	cursor: pointer;
 }
 
-.header {
-	background-color: antiquewhite;
-}
-
-.main {
-	background-color: brown;
+.btn {
+	font-weight: 500;
+	font-size: 1rem;
+	display: inline-block;
+	background-color: var(--color-blue);
+	color: var(--color-light);
+	border: 1px solid var(--color-blue);
+	padding: var(--spacing-1) var(--spacing-4);
+	border-radius: 999px;
 }
 
 /* GRID CONTAINER */
@@ -115,12 +124,14 @@ button {
 
 /* HEADER */
 .header {
-	padding: var(--spacing-4);
+	background-color: var(--color-light);
+	color: var(--color-dark);
+	padding: var(--spacing-8) var(--spacing-4);
 	grid-column: 2/3;
 	display: grid;
-	grid-template-columns: 3fr 1fr;
+	grid-template-columns: 2fr 1fr;
 	align-items: center;
-	gap: var(--spacing-4) 0;
+	gap: var(--spacing-4) var(--spacing-8);
 }
 
 .search-bar,
@@ -134,9 +145,24 @@ button {
 	font-size: 1.5rem;
 }
 
+.search-bar input {
+	border-radius: 9999px;
+	width: 100%;
+	background-color: var(--color-gray);
+	border: none;
+	outline: none;
+	padding: var(--spacing-1) var(--spacing-4);
+	font-size: 1rem;
+}
+
+.actions {
+	display: flex;
+	gap: var(--spacing-6);
+}
+
 /* SIDEBAR */
 .sidebar {
-	background-color: black;
+	background-color: var(--color-blue);
 	padding: var(--spacing-4);
 	grid-column: 1/2;
 	grid-row: 1/3;
@@ -151,13 +177,13 @@ button {
 
 .logo__image {
 	font-size: 2.5rem;
-	color: white;
+	color: var(--color-light);
 }
 
 .logo__text {
 	font-size: 1.5rem;
 	font-weight: 700;
-	color: white;
+	color: var(--color-light);
 }
 
 .menus {
@@ -189,12 +215,17 @@ button {
 .setting__icon {
 	font-size: 1.5rem;
 	padding: var(--spacing-2);
-	color: white;
+	color: var(--color-light);
 }
 
 .menu__text,
 .setting__text {
 	font-weight: 700;
 	text-decoration: none;
-	color: white;
+	color: var(--color-light);
+}
+
+/* main */
+.main {
+	background-color: var(--color-gray);
 }
