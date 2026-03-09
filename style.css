@@ -76,6 +76,10 @@ h6 {
 }
 
 /* BASE STYLING */
+body {
+	font-family: 'Montserrat';
+	line-height: 1.5;
+}
 
 .header {
 	background-color: antiquewhite;
