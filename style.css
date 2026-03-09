@@ -93,29 +93,36 @@ body {
 	background-color: brown;
 }
 
+:root {
+	--spacing-1: 0.25rem;
+	--spacing-2: 0.5rem;
+	--spacing-3: 0.75rem;
+	--spacing-4: 1rem;
+}
+
 /* GRID CONTAINER */
 .container {
 	height: 100vh;
 	display: grid;
 	grid-template-columns: 1fr 5fr;
 	grid-template-rows: 1fr 5fr;
-	gap: 1rem;
+	gap: var(--spacing-4);
 }
 
 /* HEADER */
 .header {
-	padding: 1rem;
+	padding: var(--spacing-4);
 	grid-column: 2/3;
 	display: grid;
 	grid-template-columns: 3fr 1fr;
 	align-items: center;
-	gap: 1rem 0;
+	gap: var(--spacing-4) 0;
 }
 
 .search-bar,
 .account-brief {
 	display: flex;
-	gap: 0 1rem;
+	gap: 0 var(--spacing-4);
 	align-items: center;
 }
 
@@ -125,6 +132,39 @@ body {
 
 /* SIDEBAR */
 .sidebar {
+	padding: var(--spacing-4);
 	grid-column: 1/2;
 	grid-row: 1/3;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-2);
+}
+
+.logo__image {
+	font-size: 2.5rem;
+}
+
+.logo__text {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+.menus,
+.settings {
+	list-style: none;
+	padding-inline: 0;
+}
+
+.menu {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-2);
+}
+
+.menu__icon {
+	font-size: 1.5rem;
+	padding: var(--spacing-1);
 }
