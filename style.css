@@ -261,4 +261,16 @@ button {
 /* main */
 .main {
 	background-color: var(--color-gray);
+	padding: var(--spacing-4);
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	gap: var(--spacing-8);
+}
+
+.annoucement__content {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3; /* Number of lines to show */
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
