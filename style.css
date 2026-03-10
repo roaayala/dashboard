@@ -261,7 +261,7 @@ button {
 /* main */
 .main {
 	background-color: var(--color-gray);
-	padding: var(--spacing-4);
+	padding: var(--spacing-8);
 	display: grid;
 	grid-template-columns: 3fr 1fr;
 	gap: var(--spacing-8);
@@ -278,12 +278,18 @@ button {
 .projects {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(auto-fill, minmax(10rem, 1fr));
+	grid-auto-rows: minmax(10rem, 1fr);
 	gap: var(--spacing-8);
 }
 
 .project {
 	background-color: var(--color-light);
-	padding: var(--spacing-4);
+	padding: var(--spacing-8) var(--spacing-8);
+	border-left: 0.5rem solid var(--color-orange);
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-2);
 }
 
 .project__title {
@@ -292,6 +298,22 @@ button {
 
 .project__description {
 	font-size: 0.875rem;
+}
+
+.project__buttons {
+	margin-top: auto;
+	text-align: right;
+	align-self: flex-end;
+}
+
+.project-button {
+	background-color: var(--color-light);
+	border: none;
+	font-size: 1.5rem;
+}
+
+.project-button:hover {
+	color: var(--color-blue);
 }
 
 /* side */
