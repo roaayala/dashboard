@@ -276,8 +276,8 @@ button {
 .projects {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(auto-fill, minmax(10rem, 1fr));
-	grid-auto-rows: minmax(10rem, 1fr);
+	grid-template-rows: repeat(auto-fill, minmax(15em, 1fr));
+	grid-auto-rows: minmax(15rem, 1fr);
 	gap: var(--spacing-8);
 }
 
@@ -297,6 +297,7 @@ button {
 
 .project__description {
 	font-size: 0.875rem;
+	line-height: 2;
 }
 
 .project__buttons {
@@ -316,11 +317,17 @@ button {
 }
 
 /* side */
-.annoucements__header {
+.annoucements {
+	margin-bottom: var(--spacing-8);
+}
+
+.annoucements__header,
+.trendings__header {
 	margin-bottom: var(--spacing-3);
 }
 
-.annoucements__main {
+.annoucements__main,
+.trendings__main {
 	background-color: var(--color-light);
 	padding: var(--spacing-8);
 	border-radius: 0.5rem;
@@ -343,4 +350,31 @@ button {
 	-webkit-line-clamp: 3; /* Number of lines to show */
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+.trendings__main {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-6);
+}
+
+.trending {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-4);
+}
+
+.trending__user-avatar {
+	height: 3rem;
+	width: 3rem;
+	border-radius: 9999px;
+	background-color: var(--color-orange);
+}
+
+.trending__user-name {
+	font-weight: 700;
+}
+
+.trending__user-app {
+	font-size: 0.75rem;
 }
